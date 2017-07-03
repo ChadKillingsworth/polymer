@@ -1,14 +1,14 @@
 
 /**
  * @fileoverview Closure types for Polymer mixins
- * @externs
  *
  * This file is generated, do not edit manually
  */
 /* eslint-disable no-unused-vars, strict */
 
 /**
-* @record
+* @interface
+* @extends {Polymer_PropertyAccessorsExtern}
 */
 function Polymer_PropertyAccessors(){}
 /**
@@ -18,6 +18,7 @@ function Polymer_PropertyAccessors(){}
 */
 Polymer_PropertyAccessors.prototype.attributeChangedCallback = function(name, old, value){};
 /**
+ * @return {undefined}
 */
 Polymer_PropertyAccessors.prototype._initializeProperties = function(){};
 /**
@@ -119,10 +120,8 @@ Polymer_PropertyAccessors.prototype._propertiesChanged = function(currentProps, 
 */
 Polymer_PropertyAccessors.prototype._shouldPropertyChange = function(property, value, old){};
 /**
-*/
-Polymer_PropertyAccessors.createPropertiesForAttributes = function(){};
-/**
-* @record
+* @interface
+* @extends {Polymer_TemplateStampExtern}
 */
 function Polymer_TemplateStamp(){}
 /**
@@ -151,69 +150,16 @@ Polymer_TemplateStamp.prototype._addEventListenerToNode = function(node, eventNa
 * @param {Function} handler Listener function to remove
 */
 Polymer_TemplateStamp.prototype._removeEventListenerFromNode = function(node, eventName, handler){};
+
 /**
-* @param {!HTMLTemplateElement} template Template to parse
-* @param {TemplateInfo=} outerTemplateInfo Template metadata from the outer
-  template, for parsing nested templates
-* @return {!TemplateInfo}
-*/
-Polymer_TemplateStamp._parseTemplate = function(template, outerTemplateInfo){};
-/**
-* @param {*} template 
-* @param {*} templateInfo 
-* @param {*} nodeInfo 
-*/
-Polymer_TemplateStamp._parseTemplateContent = function(template, templateInfo, nodeInfo){};
-/**
-* @param {Node} node Node to parse
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_TemplateStamp._parseTemplateNode = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Node} root Root node whose `childNodes` will be parsed
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-*/
-Polymer_TemplateStamp._parseTemplateChildNodes = function(root, templateInfo, nodeInfo){};
-/**
-* @param {HTMLTemplateElement} node Node to parse (a <template>)
-* @param {TemplateInfo} outerTemplateInfo Template metadata for current template
-  that includes the template `node`
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_TemplateStamp._parseTemplateNestedTemplate = function(node, outerTemplateInfo, nodeInfo){};
-/**
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_TemplateStamp._parseTemplateNodeAttributes = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Element} node Node to parse
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-* @param {string} name Attribute name
-* @param {string} value Attribute value
-* @return {boolean}
-*/
-Polymer_TemplateStamp._parseTemplateNodeAttribute = function(node, templateInfo, nodeInfo, name, value){};
-/**
-* @param {HTMLTemplateElement} template Template to retrieve `content` for
-* @return {DocumentFragment}
-*/
-Polymer_TemplateStamp._contentForTemplate = function(template){};
-/**
-* @record
+* @interface
 * @extends {Polymer_TemplateStamp}
+* @extends {Polymer_TemplateStampExtern}
 * @extends {Polymer_PropertyAccessors}
+* @extends {Polymer_PropertyAccessorsExtern}
 */
 function Polymer_PropertyEffects(){}
 /**
-* @override
 * @param {!HTMLTemplateElement} template Template to stamp
 * @return {!StampedTemplate}
 */
@@ -563,137 +509,10 @@ Polymer_PropertyEffects.prototype._bindTemplate = function(template, instanceBin
 */
 Polymer_PropertyEffects.prototype._removeBoundDom = function(dom){};
 /**
-* @param {!HTMLTemplateElement} template Template to parse
-* @param {TemplateInfo=} outerTemplateInfo Template metadata from the outer
-  template, for parsing nested templates
-* @return {!TemplateInfo}
-*/
-Polymer_PropertyEffects._parseTemplate = function(template, outerTemplateInfo){};
-/**
-* @param {*} template 
-* @param {*} templateInfo 
-* @param {*} nodeInfo 
-*/
-Polymer_PropertyEffects._parseTemplateContent = function(template, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_PropertyEffects._parseTemplateNode = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Node} root Root node whose `childNodes` will be parsed
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-*/
-Polymer_PropertyEffects._parseTemplateChildNodes = function(root, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_PropertyEffects._parseTemplateNestedTemplate = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_PropertyEffects._parseTemplateNodeAttributes = function(node, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @param {*} name 
-* @param {*} value 
-* @return {boolean}
-*/
-Polymer_PropertyEffects._parseTemplateNodeAttribute = function(node, templateInfo, nodeInfo, name, value){};
-/**
-* @param {HTMLTemplateElement} template Template to retrieve `content` for
-* @return {DocumentFragment}
-*/
-Polymer_PropertyEffects._contentForTemplate = function(template){};
-/**
-*/
-Polymer_PropertyEffects.createPropertiesForAttributes = function(){};
-/**
-* @param {string} property Property that should trigger the effect
-* @param {string} type Effect type, from this.PROPERTY_EFFECT_TYPES
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_PropertyEffects.addPropertyEffect = function(property, type, effect){};
-/**
-* @param {string} property Property name
-* @param {string} methodName Name of observer method to call
-* @param {boolean=} dynamicFn Whether the method name should be included as
-  a dependency to the effect.
-*/
-Polymer_PropertyEffects.createPropertyObserver = function(property, methodName, dynamicFn){};
-/**
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating
-  whether method names should be included as a dependency to the effect.
-*/
-Polymer_PropertyEffects.createMethodObserver = function(expression, dynamicFn){};
-/**
-* @param {string} property Property name
-*/
-Polymer_PropertyEffects.createNotifyingProperty = function(property){};
-/**
-* @param {string} property Property name
-* @param {boolean=} protectedSetter Creates a custom protected setter
-  when `true`.
-*/
-Polymer_PropertyEffects.createReadOnlyProperty = function(property, protectedSetter){};
-/**
-* @param {string} property Property name
-*/
-Polymer_PropertyEffects.createReflectedProperty = function(property){};
-/**
-* @param {string} property Name of computed property to set
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating whether
-  method names should be included as a dependency to the effect.
-*/
-Polymer_PropertyEffects.createComputedProperty = function(property, expression, dynamicFn){};
-/**
-* @param {HTMLTemplateElement} template Template containing binding
-  bindings
-* @return {Object}
-*/
-Polymer_PropertyEffects.bindTemplate = function(template){};
-/**
-* @param {Object} templateInfo Template metadata to add effect to
-* @param {string} prop Property that should trigger the effect
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_PropertyEffects._addTemplatePropertyEffect = function(templateInfo, prop, effect){};
-/**
-* @param {string} text Text to parse from attribute or textContent
-* @param {Object} templateInfo Current template metadata
-* @return {Array.<!BindingPart>}
-*/
-Polymer_PropertyEffects._parseBindings = function(text, templateInfo){};
-/**
-* @param {this} inst Element that should be used as scope for
-  binding dependencies
-* @param {BindingPart} part Binding part metadata
-* @param {string} path Property/path that triggered this effect
-* @param {Object} props Bag of current property changes
-* @param {Object} oldProps Bag of previous values for changed properties
-* @param {boolean} hasPaths True with `props` contains one or more paths
-* @return {*}
-*/
-Polymer_PropertyEffects._evaluateBinding = function(inst, part, path, props, oldProps, hasPaths){};
-/**
-* @record
+* @interface
 * @extends {Polymer_PropertyEffects}
+* @extends {Polymer_TemplateStamp}
+* @extends {Polymer_TemplateStampExtern}
 */
 function Polymer_ElementMixin(){}
 /**
@@ -1073,137 +892,7 @@ to the element's `importPath`
 */
 Polymer_ElementMixin.prototype.resolveUrl = function(url, base){};
 /**
-* @param {!HTMLTemplateElement} template Template to parse
-* @param {TemplateInfo=} outerTemplateInfo Template metadata from the outer
-  template, for parsing nested templates
-* @return {!TemplateInfo}
-*/
-Polymer_ElementMixin._parseTemplate = function(template, outerTemplateInfo){};
-/**
-* @override
-*/
-Polymer_ElementMixin._parseTemplateContent = function(template, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_ElementMixin._parseTemplateNode = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Node} root Root node whose `childNodes` will be parsed
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-*/
-Polymer_ElementMixin._parseTemplateChildNodes = function(root, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_ElementMixin._parseTemplateNestedTemplate = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_ElementMixin._parseTemplateNodeAttributes = function(node, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @param {*} name 
-* @param {*} value 
-* @return {boolean}
-*/
-Polymer_ElementMixin._parseTemplateNodeAttribute = function(node, templateInfo, nodeInfo, name, value){};
-/**
-* @param {HTMLTemplateElement} template Template to retrieve `content` for
-* @return {DocumentFragment}
-*/
-Polymer_ElementMixin._contentForTemplate = function(template){};
-/**
-*/
-Polymer_ElementMixin.createPropertiesForAttributes = function(){};
-/**
-* @param {string} property Property that should trigger the effect
-* @param {string} type Effect type, from this.PROPERTY_EFFECT_TYPES
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_ElementMixin.addPropertyEffect = function(property, type, effect){};
-/**
-* @param {string} property Property name
-* @param {string} methodName Name of observer method to call
-* @param {boolean=} dynamicFn Whether the method name should be included as
-  a dependency to the effect.
-*/
-Polymer_ElementMixin.createPropertyObserver = function(property, methodName, dynamicFn){};
-/**
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating
-  whether method names should be included as a dependency to the effect.
-*/
-Polymer_ElementMixin.createMethodObserver = function(expression, dynamicFn){};
-/**
-* @param {string} property Property name
-*/
-Polymer_ElementMixin.createNotifyingProperty = function(property){};
-/**
-* @param {string} property Property name
-* @param {boolean=} protectedSetter Creates a custom protected setter
-  when `true`.
-*/
-Polymer_ElementMixin.createReadOnlyProperty = function(property, protectedSetter){};
-/**
-* @param {string} property Property name
-*/
-Polymer_ElementMixin.createReflectedProperty = function(property){};
-/**
-* @param {string} property Name of computed property to set
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating whether
-  method names should be included as a dependency to the effect.
-*/
-Polymer_ElementMixin.createComputedProperty = function(property, expression, dynamicFn){};
-/**
-* @param {HTMLTemplateElement} template Template containing binding
-  bindings
-* @return {Object}
-*/
-Polymer_ElementMixin.bindTemplate = function(template){};
-/**
-* @param {Object} templateInfo Template metadata to add effect to
-* @param {string} prop Property that should trigger the effect
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_ElementMixin._addTemplatePropertyEffect = function(templateInfo, prop, effect){};
-/**
-* @param {string} text Text to parse from attribute or textContent
-* @param {Object} templateInfo Current template metadata
-* @return {Array.<!BindingPart>}
-*/
-Polymer_ElementMixin._parseBindings = function(text, templateInfo){};
-/**
-* @param {this} inst Element that should be used as scope for
-  binding dependencies
-* @param {BindingPart} part Binding part metadata
-* @param {string} path Property/path that triggered this effect
-* @param {Object} props Bag of current property changes
-* @param {Object} oldProps Bag of previous values for changed properties
-* @param {boolean} hasPaths True with `props` contains one or more paths
-* @return {*}
-*/
-Polymer_ElementMixin._evaluateBinding = function(inst, part, path, props, oldProps, hasPaths){};
-/**
-*/
-Polymer_ElementMixin.finalize = function(){};
-/**
-* @record
+* @interface
 */
 function Polymer_GestureEventListeners(){}
 /**
@@ -1219,8 +908,9 @@ Polymer_GestureEventListeners.prototype._addEventListenerToNode = function(node,
 */
 Polymer_GestureEventListeners.prototype._removeEventListenerFromNode = function(node, eventName, handler){};
 /**
-* @record
+* @interface
 * @extends {Polymer_ElementMixin}
+* @extends {Polymer_ElementMixinExtern}
 * @extends {Polymer_GestureEventListeners}
 */
 function Polymer_LegacyElementMixin(){}
@@ -1889,137 +1579,7 @@ Polymer_LegacyElementMixin.prototype._error = function(args){};
 */
 Polymer_LegacyElementMixin.prototype._logf = function(methodName, args){};
 /**
-* @param {!HTMLTemplateElement} template Template to parse
-* @param {TemplateInfo=} outerTemplateInfo Template metadata from the outer
-  template, for parsing nested templates
-* @return {!TemplateInfo}
-*/
-Polymer_LegacyElementMixin._parseTemplate = function(template, outerTemplateInfo){};
-/**
-* @override
-*/
-Polymer_LegacyElementMixin._parseTemplateContent = function(template, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_LegacyElementMixin._parseTemplateNode = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Node} root Root node whose `childNodes` will be parsed
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-*/
-Polymer_LegacyElementMixin._parseTemplateChildNodes = function(root, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_LegacyElementMixin._parseTemplateNestedTemplate = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_LegacyElementMixin._parseTemplateNodeAttributes = function(node, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @param {*} name 
-* @param {*} value 
-* @return {boolean}
-*/
-Polymer_LegacyElementMixin._parseTemplateNodeAttribute = function(node, templateInfo, nodeInfo, name, value){};
-/**
-* @param {HTMLTemplateElement} template Template to retrieve `content` for
-* @return {DocumentFragment}
-*/
-Polymer_LegacyElementMixin._contentForTemplate = function(template){};
-/**
-*/
-Polymer_LegacyElementMixin.createPropertiesForAttributes = function(){};
-/**
-* @param {string} property Property that should trigger the effect
-* @param {string} type Effect type, from this.PROPERTY_EFFECT_TYPES
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_LegacyElementMixin.addPropertyEffect = function(property, type, effect){};
-/**
-* @param {string} property Property name
-* @param {string} methodName Name of observer method to call
-* @param {boolean=} dynamicFn Whether the method name should be included as
-  a dependency to the effect.
-*/
-Polymer_LegacyElementMixin.createPropertyObserver = function(property, methodName, dynamicFn){};
-/**
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating
-  whether method names should be included as a dependency to the effect.
-*/
-Polymer_LegacyElementMixin.createMethodObserver = function(expression, dynamicFn){};
-/**
-* @param {string} property Property name
-*/
-Polymer_LegacyElementMixin.createNotifyingProperty = function(property){};
-/**
-* @param {string} property Property name
-* @param {boolean=} protectedSetter Creates a custom protected setter
-  when `true`.
-*/
-Polymer_LegacyElementMixin.createReadOnlyProperty = function(property, protectedSetter){};
-/**
-* @param {string} property Property name
-*/
-Polymer_LegacyElementMixin.createReflectedProperty = function(property){};
-/**
-* @param {string} property Name of computed property to set
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating whether
-  method names should be included as a dependency to the effect.
-*/
-Polymer_LegacyElementMixin.createComputedProperty = function(property, expression, dynamicFn){};
-/**
-* @param {HTMLTemplateElement} template Template containing binding
-  bindings
-* @return {Object}
-*/
-Polymer_LegacyElementMixin.bindTemplate = function(template){};
-/**
-* @param {Object} templateInfo Template metadata to add effect to
-* @param {string} prop Property that should trigger the effect
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_LegacyElementMixin._addTemplatePropertyEffect = function(templateInfo, prop, effect){};
-/**
-* @param {string} text Text to parse from attribute or textContent
-* @param {Object} templateInfo Current template metadata
-* @return {Array.<!BindingPart>}
-*/
-Polymer_LegacyElementMixin._parseBindings = function(text, templateInfo){};
-/**
-* @param {this} inst Element that should be used as scope for
-  binding dependencies
-* @param {BindingPart} part Binding part metadata
-* @param {string} path Property/path that triggered this effect
-* @param {Object} props Bag of current property changes
-* @param {Object} oldProps Bag of previous values for changed properties
-* @param {boolean} hasPaths True with `props` contains one or more paths
-* @return {*}
-*/
-Polymer_LegacyElementMixin._evaluateBinding = function(inst, part, path, props, oldProps, hasPaths){};
-/**
-*/
-Polymer_LegacyElementMixin.finalize = function(){};
-/**
-* @record
+* @interface
 */
 function Polymer_MutableData(){}
 /**
@@ -2030,7 +1590,7 @@ function Polymer_MutableData(){}
 */
 Polymer_MutableData.prototype._shouldPropertyChange = function(property, value, old){};
 /**
-* @record
+* @interface
 */
 function Polymer_OptionalMutableData(){}
 /** @type {boolean} */
@@ -2044,8 +1604,9 @@ Polymer_OptionalMutableData.prototype.mutableData;
 */
 Polymer_OptionalMutableData.prototype._shouldPropertyChange = function(property, value, old){};
 /**
-* @record
+* @interface
 * @extends {Polymer_ElementMixin}
+* @extends {Polymer_ElementMixinExtern}
 */
 function Polymer_ArraySelectorMixin(){}
 /** @type {Array} */
@@ -2468,133 +2029,3 @@ Polymer_ArraySelectorMixin.prototype.select = function(item){};
 * @param {number} idx Index from `items` array to select
 */
 Polymer_ArraySelectorMixin.prototype.selectIndex = function(idx){};
-/**
-* @param {!HTMLTemplateElement} template Template to parse
-* @param {TemplateInfo=} outerTemplateInfo Template metadata from the outer
-  template, for parsing nested templates
-* @return {!TemplateInfo}
-*/
-Polymer_ArraySelectorMixin._parseTemplate = function(template, outerTemplateInfo){};
-/**
-* @override
-*/
-Polymer_ArraySelectorMixin._parseTemplateContent = function(template, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_ArraySelectorMixin._parseTemplateNode = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Node} root Root node whose `childNodes` will be parsed
-* @param {!TemplateInfo} templateInfo Template metadata for current template
-* @param {!NodeInfo} nodeInfo Node metadata for current template.
-*/
-Polymer_ArraySelectorMixin._parseTemplateChildNodes = function(root, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Node} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @return {boolean}
-*/
-Polymer_ArraySelectorMixin._parseTemplateNestedTemplate = function(node, templateInfo, nodeInfo){};
-/**
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template.
-* @return {boolean}
-*/
-Polymer_ArraySelectorMixin._parseTemplateNodeAttributes = function(node, templateInfo, nodeInfo){};
-/**
-* @override
-* @param {Element} node Node to parse
-* @param {TemplateInfo} templateInfo Template metadata for current template
-* @param {NodeInfo} nodeInfo Node metadata for current template node
-* @param {*} name 
-* @param {*} value 
-* @return {boolean}
-*/
-Polymer_ArraySelectorMixin._parseTemplateNodeAttribute = function(node, templateInfo, nodeInfo, name, value){};
-/**
-* @param {HTMLTemplateElement} template Template to retrieve `content` for
-* @return {DocumentFragment}
-*/
-Polymer_ArraySelectorMixin._contentForTemplate = function(template){};
-/**
-*/
-Polymer_ArraySelectorMixin.createPropertiesForAttributes = function(){};
-/**
-* @param {string} property Property that should trigger the effect
-* @param {string} type Effect type, from this.PROPERTY_EFFECT_TYPES
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_ArraySelectorMixin.addPropertyEffect = function(property, type, effect){};
-/**
-* @param {string} property Property name
-* @param {string} methodName Name of observer method to call
-* @param {boolean=} dynamicFn Whether the method name should be included as
-  a dependency to the effect.
-*/
-Polymer_ArraySelectorMixin.createPropertyObserver = function(property, methodName, dynamicFn){};
-/**
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating
-  whether method names should be included as a dependency to the effect.
-*/
-Polymer_ArraySelectorMixin.createMethodObserver = function(expression, dynamicFn){};
-/**
-* @param {string} property Property name
-*/
-Polymer_ArraySelectorMixin.createNotifyingProperty = function(property){};
-/**
-* @param {string} property Property name
-* @param {boolean=} protectedSetter Creates a custom protected setter
-  when `true`.
-*/
-Polymer_ArraySelectorMixin.createReadOnlyProperty = function(property, protectedSetter){};
-/**
-* @param {string} property Property name
-*/
-Polymer_ArraySelectorMixin.createReflectedProperty = function(property){};
-/**
-* @param {string} property Name of computed property to set
-* @param {string} expression Method expression
-* @param {(boolean|Object)=} dynamicFn Boolean or object map indicating whether
-  method names should be included as a dependency to the effect.
-*/
-Polymer_ArraySelectorMixin.createComputedProperty = function(property, expression, dynamicFn){};
-/**
-* @param {HTMLTemplateElement} template Template containing binding
-  bindings
-* @return {Object}
-*/
-Polymer_ArraySelectorMixin.bindTemplate = function(template){};
-/**
-* @param {Object} templateInfo Template metadata to add effect to
-* @param {string} prop Property that should trigger the effect
-* @param {Object=} effect Effect metadata object
-*/
-Polymer_ArraySelectorMixin._addTemplatePropertyEffect = function(templateInfo, prop, effect){};
-/**
-* @param {string} text Text to parse from attribute or textContent
-* @param {Object} templateInfo Current template metadata
-* @return {Array.<!BindingPart>}
-*/
-Polymer_ArraySelectorMixin._parseBindings = function(text, templateInfo){};
-/**
-* @param {this} inst Element that should be used as scope for
-  binding dependencies
-* @param {BindingPart} part Binding part metadata
-* @param {string} path Property/path that triggered this effect
-* @param {Object} props Bag of current property changes
-* @param {Object} oldProps Bag of previous values for changed properties
-* @param {boolean} hasPaths True with `props` contains one or more paths
-* @return {*}
-*/
-Polymer_ArraySelectorMixin._evaluateBinding = function(inst, part, path, props, oldProps, hasPaths){};
-/**
-*/
-Polymer_ArraySelectorMixin.finalize = function(){};
